@@ -1,0 +1,100 @@
+MPASM 5.82                   ASSIGNMENT2.ASM   8-1-2021  15:21:00         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+  00000003            00001 STATUS equ 03h
+  00000005            00002 RP0 equ 05
+  00000006            00003 RP1 equ 06
+  00000005            00004 PORTA equ 05h
+  00000085            00005 TRISA equ 85h
+                      00006  
+                      00007  
+Warning[207]: Found label after column 1. (COUNTER)
+  00000020            00008  COUNTER equ 20h 
+                      00009  
+                      00010  
+                      00011     org 00 
+0000   0103           00012     clrw 
+                      00013     
+0001   1283           00014     BCF STATUS, RP0 
+0002   1303           00015     BCF STATUS, RP1 
+                      00016 
+0003   0185           00017     CLRF PORTA 
+                      00018     
+0004   1683           00019     BSF STATUS, RP0
+                      00020     
+0005   3000           00021     MOVLW 0x00 
+                      00022     
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0006   0085           00023     MOVWF TRISA 
+                      00024     
+0007   1283           00025     BCF STATUS, RP0 
+0008   1303           00026     BCF STATUS, RP1 
+                      00027  
+0009   3002           00028 START   MOVLW  B'00000010'
+000A   0085           00029         MOVWF PORTA  
+                      00030     
+000B   30FF           00031         MOVLW 0xff
+000C   00A0           00032         MOVWF COUNTER 
+                      00033 
+Message[305]: Using default destination of 1 (file).
+000D   0BA0           00034 LOOP1   DECFSZ COUNTER
+000E   2???           00035         GOTO LOOP1
+                      00036         
+000F   0185           00037         CLRF PORTA
+                      00038 
+0010   3004           00039         MOVLW B'00000100'
+0011   0085           00040         MOVWF PORTA  
+                      00041     
+0012   30FF           00042         MOVLW 0xff
+0013   00A0           00043         MOVWF COUNTER 
+                      00044         
+Message[305]: Using default destination of 1 (file).
+0014   0BA0           00045 LOOP2   DECFSZ COUNTER
+0015   2???           00046         GOTO LOOP2
+                      00047         
+0016   0185           00048         CLRF PORTA
+0017   3008           00049         MOVLW B'00001000'
+MPASM 5.82                   ASSIGNMENT2.ASM   8-1-2021  15:21:00         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0018   0085           00050         MOVWF PORTA
+                      00051         
+0019   30FF           00052         MOVLW 0xff
+001A   00A0           00053         MOVWF COUNTER   
+                      00054         
+Message[305]: Using default destination of 1 (file).
+001B   0BA0           00055 LOOP3   DECFSZ COUNTER
+001C   2???           00056         GOTO LOOP3
+                      00057         
+001D   2???           00058         GOTO START 
+Warning[205]: Found directive in column 1. (END)
+                      00059 END 
+MPASM 5.82                   ASSIGNMENT2.ASM   8-1-2021  15:21:00         PAGE  3
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+COUNTER                           00000020
+LOOP1                             0000000D
+LOOP2                             00000014
+LOOP3                             0000001B
+PORTA                             00000005
+RP0                               00000005
+RP1                               00000006
+START                             00000009
+STATUS                            00000003
+TRISA                             00000085
+__16F877A                         00000001
+
+Errors   :     0
+Warnings :     2 reported,     0 suppressed
+Messages :     4 reported,     0 suppressed
+
+
