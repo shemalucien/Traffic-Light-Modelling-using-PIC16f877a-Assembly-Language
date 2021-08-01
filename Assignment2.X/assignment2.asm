@@ -23,17 +23,17 @@ COUNTER2 equ 0x0D
 
 START    MOVLW   0x02
          MOVWF   PORTA
-	 call    first_delay
+	 call    delay_1
 	 MOVLW   0x04
          MOVWF   PORTA
-	 call    first_delay
+	 call    delay_1
 	 MOVLW   0x08
          MOVWF   PORTA
-	 call    second_delay
+	 call    delay_2
 
          GOTO    START
 ;delay  
-first_delay MOVLW d'40'
+delay_1	   MOVLW d'40'
 	   MOVWF COUNTER1
 dec_2      MOVLW d'255'
 	   MOVWF COUNTER2
@@ -42,7 +42,7 @@ dec_1      DECFSZ  COUNTER2,1
 	   DECFSZ  COUNTER1,1
 	   goto  dec_2
 	   return
-second_delay MOVLW d'10'
+delay_2    MOVLW d'10'
 	   MOVWF COUNTER1
 dec_4      MOVLW d'255'
 	   MOVWF COUNTER2

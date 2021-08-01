@@ -1,5 +1,5 @@
 MPLINK 5.09, LINKER
-Linker Map File - Created Sun Aug 01 20:15:18 2021
+Linker Map File - Created Sun Aug 01 20:20:07 2021
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -27,8 +27,8 @@ Linker Map File - Created Sun Aug 01 20:15:18 2021
                     dec_2   0x000014    program     static D:\Courses\CSE\4th_Year\Semester I\Embedded Computer Systems Engineering\assignment2\Assignment2.X\assignment2.asm
                     dec_3   0x00001f    program     static D:\Courses\CSE\4th_Year\Semester I\Embedded Computer Systems Engineering\assignment2\Assignment2.X\assignment2.asm
                     dec_4   0x00001d    program     static D:\Courses\CSE\4th_Year\Semester I\Embedded Computer Systems Engineering\assignment2\Assignment2.X\assignment2.asm
-              first_delay   0x000012    program     static D:\Courses\CSE\4th_Year\Semester I\Embedded Computer Systems Engineering\assignment2\Assignment2.X\assignment2.asm
-             second_delay   0x00001b    program     static D:\Courses\CSE\4th_Year\Semester I\Embedded Computer Systems Engineering\assignment2\Assignment2.X\assignment2.asm
+                  delay_1   0x000012    program     static D:\Courses\CSE\4th_Year\Semester I\Embedded Computer Systems Engineering\assignment2\Assignment2.X\assignment2.asm
+                  delay_2   0x00001b    program     static D:\Courses\CSE\4th_Year\Semester I\Embedded Computer Systems Engineering\assignment2\Assignment2.X\assignment2.asm
 
 
 
@@ -36,10 +36,10 @@ Linker Map File - Created Sun Aug 01 20:15:18 2021
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
                     START   0x000008    program     static D:\Courses\CSE\4th_Year\Semester I\Embedded Computer Systems Engineering\assignment2\Assignment2.X\assignment2.asm
-              first_delay   0x000012    program     static D:\Courses\CSE\4th_Year\Semester I\Embedded Computer Systems Engineering\assignment2\Assignment2.X\assignment2.asm
+                  delay_1   0x000012    program     static D:\Courses\CSE\4th_Year\Semester I\Embedded Computer Systems Engineering\assignment2\Assignment2.X\assignment2.asm
                     dec_2   0x000014    program     static D:\Courses\CSE\4th_Year\Semester I\Embedded Computer Systems Engineering\assignment2\Assignment2.X\assignment2.asm
                     dec_1   0x000016    program     static D:\Courses\CSE\4th_Year\Semester I\Embedded Computer Systems Engineering\assignment2\Assignment2.X\assignment2.asm
-             second_delay   0x00001b    program     static D:\Courses\CSE\4th_Year\Semester I\Embedded Computer Systems Engineering\assignment2\Assignment2.X\assignment2.asm
+                  delay_2   0x00001b    program     static D:\Courses\CSE\4th_Year\Semester I\Embedded Computer Systems Engineering\assignment2\Assignment2.X\assignment2.asm
                     dec_4   0x00001d    program     static D:\Courses\CSE\4th_Year\Semester I\Embedded Computer Systems Engineering\assignment2\Assignment2.X\assignment2.asm
                     dec_3   0x00001f    program     static D:\Courses\CSE\4th_Year\Semester I\Embedded Computer Systems Engineering\assignment2\Assignment2.X\assignment2.asm
 

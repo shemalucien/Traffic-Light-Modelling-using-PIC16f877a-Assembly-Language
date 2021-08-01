@@ -1,4 +1,4 @@
-MPASM 5.82                   ASSIGNMENT2.ASM   8-1-2021  20:15:17         PAGE  1
+MPASM 5.82                   ASSIGNMENT2.ASM   8-1-2021  20:20:06         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -42,22 +42,22 @@ Message[302]: Register in operand not in bank 0.  Ensure that bank bits are corr
                       00023 
 0008   3002           00024 START    MOVLW   0x02
 0009   0085           00025          MOVWF   PORTA
-000A   2???           00026          call    first_delay
+000A   2???           00026          call    delay_1
 000B   3004           00027          MOVLW   0x04
 000C   0085           00028          MOVWF   PORTA
-000D   2???           00029          call    first_delay
+000D   2???           00029          call    delay_1
 000E   3008           00030          MOVLW   0x08
 000F   0085           00031          MOVWF   PORTA
-0010   2???           00032          call    second_delay
+0010   2???           00032          call    delay_2
                       00033 
 0011   2???           00034          GOTO    START
                       00035 ;delay  
-0012   3028           00036 first_delay MOVLW d'40'
+0012   3028           00036 delay_1    MOVLW d'40'
 0013   008C           00037            MOVWF COUNTER1
 0014   30FF           00038 dec_2      MOVLW d'255'
 0015   008D           00039            MOVWF COUNTER2
 0016   0B8D           00040 dec_1      DECFSZ  COUNTER2,1
-MPASM 5.82                   ASSIGNMENT2.ASM   8-1-2021  20:15:17         PAGE  2
+MPASM 5.82                   ASSIGNMENT2.ASM   8-1-2021  20:20:06         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -67,7 +67,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 0018   0B8C           00042            DECFSZ  COUNTER1,1
 0019   2???           00043            goto  dec_2
 001A   0008           00044            return
-001B   300A           00045 second_delay MOVLW d'10'
+001B   300A           00045 delay_2    MOVLW d'10'
 001C   008C           00046            MOVWF COUNTER1
 001D   30FF           00047 dec_4      MOVLW d'255'
 001E   008D           00048            MOVWF COUNTER2
@@ -79,7 +79,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00054          
 Warning[205]: Found directive in column 1. (END)
 3FFF                  00055 END
-MPASM 5.82                   ASSIGNMENT2.ASM   8-1-2021  20:15:17         PAGE  3
+MPASM 5.82                   ASSIGNMENT2.ASM   8-1-2021  20:20:06         PAGE  3
 
 
 SYMBOL TABLE
@@ -138,7 +138,7 @@ CHS1                              00000004
 CHS2                              00000005
 CIS                               00000003
 CKE                               00000006
-MPASM 5.82                   ASSIGNMENT2.ASM   8-1-2021  20:15:17         PAGE  4
+MPASM 5.82                   ASSIGNMENT2.ASM   8-1-2021  20:20:06         PAGE  4
 
 
 SYMBOL TABLE
@@ -197,7 +197,7 @@ INTE                              00000004
 INTEDG                            00000006
 INTF                              00000001
 IRP                               00000007
-MPASM 5.82                   ASSIGNMENT2.ASM   8-1-2021  20:15:17         PAGE  5
+MPASM 5.82                   ASSIGNMENT2.ASM   8-1-2021  20:20:06         PAGE  5
 
 
 SYMBOL TABLE
@@ -256,7 +256,7 @@ RA4                               00000004
 RA5                               00000005
 RB0                               00000000
 RB1                               00000001
-MPASM 5.82                   ASSIGNMENT2.ASM   8-1-2021  20:15:17         PAGE  6
+MPASM 5.82                   ASSIGNMENT2.ASM   8-1-2021  20:20:06         PAGE  6
 
 
 SYMBOL TABLE
@@ -315,7 +315,7 @@ SREN                              00000005
 SSPADD                            00000093
 SSPBUF                            00000013
 SSPCON                            00000014
-MPASM 5.82                   ASSIGNMENT2.ASM   8-1-2021  20:15:17         PAGE  7
+MPASM 5.82                   ASSIGNMENT2.ASM   8-1-2021  20:20:06         PAGE  7
 
 
 SYMBOL TABLE
@@ -374,7 +374,7 @@ TRISA4                            00000004
 TRISA5                            00000005
 TRISB                             00000086
 TRISB0                            00000000
-MPASM 5.82                   ASSIGNMENT2.ASM   8-1-2021  20:15:17         PAGE  8
+MPASM 5.82                   ASSIGNMENT2.ASM   8-1-2021  20:20:06         PAGE  8
 
 
 SYMBOL TABLE
@@ -433,7 +433,7 @@ _BOREN_ON                         00003FFF
 _CONFIG                           00002007
 _CPD_OFF                          00003FFF
 _CPD_ON                           00003EFF
-MPASM 5.82                   ASSIGNMENT2.ASM   8-1-2021  20:15:17         PAGE  9
+MPASM 5.82                   ASSIGNMENT2.ASM   8-1-2021  20:20:06         PAGE  9
 
 
 SYMBOL TABLE
@@ -474,8 +474,8 @@ dec_1                             00000016
 dec_2                             00000014
 dec_3                             0000001F
 dec_4                             0000001D
-first_delay                       00000012
-second_delay                      0000001B
+delay_1                           00000012
+delay_2                           0000001B
 
 Errors   :     0
 Warnings :     3 reported,     0 suppressed
